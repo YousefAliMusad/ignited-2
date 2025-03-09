@@ -1,0 +1,182 @@
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #111827;
+    /* bg-gray-900 */
+    color: #f3f4f6;
+    /* text-gray-100 */
+    min-height: 100vh;
+}
+
+/* Button Styles */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    /* px-6 py-3 */
+    border: 1px solid transparent;
+    font-size: 1rem;
+    /* text-base */
+    font-weight: 500;
+    /* font-medium */
+    border-radius: 0.5rem;
+    /* rounded-lg */
+    color: white;
+    /* text-white */
+    background-color: #2563eb;
+    /* bg-blue-600 */
+    transition: all 0.2s ease-in-out;
+    /* transition-all duration-200 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* shadow-lg */
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    /* hover:bg-blue-700 */
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+    /* hover:shadow-blue-500/20 */
+}
+
+.btn-primary:focus {
+    outline: none;
+    /* focus:outline-none */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+    /* focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 */
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    /* px-6 py-3 */
+    border: 2px solid #3b82f6;
+    /* border-2 border-blue-500 */
+    font-size: 1rem;
+    /* text-base */
+    font-weight: 500;
+    /* font-medium */
+    border-radius: 0.5rem;
+    /* rounded-lg */
+    color: #60a5fa;
+    /* text-blue-400 */
+    background-color: transparent;
+    /* bg-transparent */
+    transition: all 0.2s ease-in-out;
+    /* transition-all duration-200 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* shadow-lg */
+}
+
+.btn-secondary:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    /* hover:bg-blue-500/10 */
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+    /* hover:shadow-blue-500/20 */
+}
+
+.btn-secondary:focus {
+    outline: none;
+    /* focus:outline-none */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+    /* focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 */
+}
+
+/* Section Styles */
+.section-title {
+    font-size: 1.875rem;
+    /* text-3xl */
+    font-weight: 700;
+    /* font-bold */
+    color: white;
+    /* text-white */
+}
+
+@media (min-width: 640px) {
+    .section-title {
+        font-size: 2.25rem;
+        /* sm:text-4xl */
+    }
+}
+
+.section-subtitle {
+    margin-top: 1rem;
+    /* mt-4 */
+    font-size: 1.25rem;
+    /* text-xl */
+    color: #9ca3af;
+    /* text-gray-400 */
+    max-width: 48rem;
+    /* max-w-3xl */
+    margin-left: auto;
+    /* mx-auto */
+    margin-right: auto;
+}
+
+/* Input Field Styles */
+.input-field {
+    margin-top: 0.25rem;
+    /* mt-1 */
+    display: block;
+    width: 100%;
+    /* w-full */
+    border-radius: 0.5rem;
+    /* rounded-lg */
+    border: 1px solid #4b5563;
+    /* border-gray-600 */
+    background-color: #1f2937;
+    /* bg-gray-800 */
+    color: white;
+    /* text-white */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    /* shadow-sm */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    /* transition-colors duration-200 */
+}
+
+.input-field:focus {
+    border-color: #3b82f6;
+    /* focus:border-blue-500 */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+    /* focus:ring-blue-500 */
+}
+
+/* Card Styles */
+.card {
+    background-color: #1f2937;
+    /* bg-gray-800 */
+    border-radius: 1rem;
+    /* rounded-xl */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* shadow-lg */
+    padding: 2rem;
+    /* p-8 */
+    border: 1px solid #374151;
+    /* border border-gray-700 */
+    transition: all 0.3s ease-in-out;
+    /* transition-all duration-300 */
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    /* hover:shadow-xl */
+    border-color: rgba(59, 130, 246, 0.5);
+    /* hover:border-blue-500/50 */
+}
+
+/* Glass Card Styles */
+.glass-card {
+    background-color: rgba(31, 41, 55, 0.5);
+    /* bg-gray-800/50 */
+    backdrop-filter: blur(10px);
+    /* backdrop-blur-lg */
+    border-radius: 1rem;
+    /* rounded-xl */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* shadow-lg */
+    border: 1px solid rgba(55, 65, 81, 0.5);
+    /* border border-gray-700/50 */
+}
