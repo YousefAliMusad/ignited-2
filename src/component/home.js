@@ -97,11 +97,11 @@ function Home() {
       <div id="home" className="relative min-h-screen flex items-center">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-gray-900/95 to-gray-900"></div>
-          <img 
+          {/* <img 
             src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&auto=format&fit=crop&q=80"
             alt="Solar Background"
             className="w-full h-full object-cover"
-          />
+          /> */}
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="lg:flex lg:items-center lg:justify-between">

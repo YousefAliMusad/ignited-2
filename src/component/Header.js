@@ -6,7 +6,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 w-full z-50 bg-gray-900/95 backdrop-blur-lg shadow-lg">
+    <nav className="sticky top-0 w-full z-50 bg-gray-900/95  shadow-lg" style={{backgroundColor:"#111827"}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
