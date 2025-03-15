@@ -7,6 +7,8 @@ import Dashboard from './component/Dashboard';
 import CompanyDetails from './component/CompanyDetails';
 import Header from './component/Header';
 import Footer from './component/Footer';
+import Chatbot from './component/CustomerService';
+// import Footer from './component/Footer';
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="Dashboard" element={<Dashboard />} />
             <Route path="/company/:id" element={<CompanyDetails />} />
+            <Route path="/CustomerService" element={<Chatbot />} />
         </Routes>
     <Footer/>
     </Router>

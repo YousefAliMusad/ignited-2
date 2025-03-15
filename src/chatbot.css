@@ -1,0 +1,97 @@
+/* Chatbot Container */
+.chatbot-container {
+    margin-top: 20px;
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    background-color: #1e2739;
+    /* Dark background */
+    color: #f3f4f6;
+    /* Light text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Full height */
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+/* Messages Section */
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 80px;
+    /* Space for input area */
+}
+
+/* Individual Messages */
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    max-width: 60%;
+}
+
+.message.user {
+    background-color: #2563eb;
+    /* Button color */
+    color: white;
+    margin-left: auto;
+    /* Align to the right */
+}
+
+.message.bot {
+    background-color: #374151;
+    /* Dark gray for bot messages */
+    margin-right: auto;
+    /* Align to the left */
+}
+
+/* Input Area */
+.input-area {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #111827;
+    padding: 10px 20px;
+    display: flex;
+    gap: 10px;   
+    border-top: 1px solid #374151;
+    /* Subtle border */
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    background-color: #1f2937;
+    /* Dark input background */
+    color: #f3f4f6;
+    /* Light text */
+    outline: none;
+}
+
+.input-area input::placeholder {
+    color: #9ca3af;
+    /* Placeholder text color */
+}
+
+.input-area button {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    /* Button color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+    background-color: #1d4ed8;
+    /* Darker shade on hover */
+}

@@ -17,7 +17,7 @@ function Header() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {["services", "companies", "benefits", "contact"].map((section) => (
+            {["services", "companies", "benefits", "contact", "Customer Service"].map((section) => (
               <a
                 key={section}
                 href={`#${section}`}
@@ -28,6 +28,9 @@ function Header() {
             ))}
             <Link to="/SolarForm" className="btn-primary">
               Get Started
+            </Link>
+            <Link to="/CustomerService" className="btn-primary">
+              Customer Service
             </Link>
           </div>
 
@@ -59,7 +62,7 @@ function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-gray-900/95 backdrop-blur-lg border-t border-gray-800">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            {["services", "companies", "benefits", "contact"].map((section) => (
+            {["services", "companies", "benefits", "contact", ""].map((section) => (
               <a
                 key={section}
                 href={`#${section}`}
@@ -68,6 +71,12 @@ function Header() {
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </a>
             ))}
+            <Link to="/SolarForm" className="btn-primary mr-2">
+              Get  Started
+            </Link>
+            <Link to="/CustomerService" className="btn-primary">
+              Customer Service
+            </Link>
           </div>
         </div>
       )}
