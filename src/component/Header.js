@@ -98,13 +98,13 @@ function Header() {
               Customer Service
             </Link>
             {userData ? (
-              <>
+              <div>
                 <Link to="/Profile" className="btn-primary mr-2">
                   Profile
                 </Link>
                 <button onClick={signOut} className="w-full mt-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">Sign Out</button>
                 
-              </>
+              </div>
             ) : (
               
               <Link to="/SolarForm" className="btn-primary mr-2">

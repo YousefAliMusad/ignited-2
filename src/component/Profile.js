@@ -153,7 +153,7 @@ const Profile = () => {
             {/* Right Column: Energy Consumption Chart */}
             <div className="col-span-1 lg:col-span-3">
               <div className="bg-gray-800 rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-6">Energy Consumption Trends</h3>
+                <h3 className="text-xl font-bold text-white mb-6">Energy Production Trends</h3>
                 <ResponsiveContainer width="100%" height={300}>
                   <BarChart data={chartData}>
                     <XAxis dataKey="name" stroke="#6b7280" />
