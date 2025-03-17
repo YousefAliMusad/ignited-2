@@ -8,21 +8,25 @@ import CompanyDetails from './component/CompanyDetails';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import Chatbot from './component/CustomerService';
-// import Footer from './component/Footer';
+import { UserProvider } from './component/UserContext';
+import Profile from './component/Profile';
 
 function App() {
   return (
-    <Router>
-    <Header/>
-    <Routes>
-            <Route path="/SolarForm" element={<SolarForm />} />
-            <Route path="/" element={<Home />} />
-            <Route path="Dashboard" element={<Dashboard />} />
-            <Route path="/company/:id" element={<CompanyDetails />} />
-            <Route path="/CustomerService" element={<Chatbot />} />
+    <UserProvider>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/SolarForm" element={<SolarForm />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/Dashboard" element={<Dashboard />} />
+          <Route path="/company/:id" element={<CompanyDetails />} />
+          <Route path="/CustomerService" element={<Chatbot />} />
+          <Route path="/Profile" element={<Profile />} />
         </Routes>
-    <Footer/>
-    </Router>
+        <Footer />
+      </Router>
+    </UserProvider>
   );
 }
 

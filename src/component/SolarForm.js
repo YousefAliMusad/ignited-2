@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { db } from "./firebase";
 import { collection, addDoc } from "firebase/firestore";
+import { UserContext } from './UserContext';
+import { useNavigate } from "react-router-dom";
 
 const SolarForm = () => {
   const [formData, setFormData] = useState({
@@ -17,6 +19,9 @@ const SolarForm = () => {
     notes: "",
   });
 
+  const { setUserData } = useContext(UserContext);
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -27,19 +32,8 @@ const SolarForm = () => {
     try {
       await addDoc(collection(db, "solarRequests"), formData);
       alert("Form submitted successfully!");
-      setFormData({
-        numPanels: "",
-        orgName: "",
-        leaderName: "",
-        orgEmail: "",
-        leaderEmail: "",
-        target: "",
-        location: "",
-        budget: "",
-        projectDuration: "",
-        energyConsumption: "",
-        notes: "",
-      });
+      setUserData(formData); // Set user data in context
+      navigate("/Profile"); // Navigate to profile page
     } catch (error) {
       console.error("Error submitting form: ", error);
       alert("Error submitting form. Please try again.");
