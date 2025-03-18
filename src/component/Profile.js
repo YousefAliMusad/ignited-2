@@ -1,15 +1,13 @@
-// Profile.js (with Edit Modal)
 import React, { useContext, useState } from "react";
 import { UserContext } from './UserContext';
-import { Building, User, Mail, Target, MapPin, DollarSign, Calendar, Zap, FileText, Edit } from 'lucide-react';
+import { User, Mail, MapPin, FileText, Edit } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const Profile = () => {
   const { userData, setUserData } = useContext(UserContext);
-  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
-  const [formData, setFormData] = useState({ ...userData }); // Form data state
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({ ...userData });
 
-  // Dummy data for the chart
   const chartData = [
     { name: 'Jan', energy: 4000 },
     { name: 'Feb', energy: 3000 },
@@ -19,27 +17,24 @@ const Profile = () => {
     { name: 'Jun', energy: 7000 },
   ];
 
-  // Function to handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUserData(formData); // Update user data in context
-    setIsModalOpen(false); // Close the modal
+    setUserData(formData);
+    setIsModalOpen(false);
   };
 
   return (
     <div className="min-h-screen bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold text-white">Organization Profile</h2>
           <button
-            onClick={() => setIsModalOpen(true)} // Open modal on click
+            onClick={() => setIsModalOpen(true)}
             className="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
             <Edit className="w-5 h-5" />
@@ -49,19 +44,8 @@ const Profile = () => {
 
         {userData ? (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column: Organization Details */}
             <div className="col-span-1">
               <div className="bg-gray-800 rounded-xl shadow-lg p-6">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-blue-900 flex items-center justify-center">
-                    <Building className="w-8 h-8 text-blue-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{userData.orgName}</h3>
-                    <p className="text-sm text-gray-400">Solar Energy Project</p>
-                  </div>
-                </div>
-
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <User className="w-6 h-6 text-gray-400" />
@@ -70,15 +54,6 @@ const Profile = () => {
                       <p className="text-lg font-semibold text-white">{userData.leaderName}</p>
                     </div>
                   </div>
-
-                  <div className="flex items-center space-x-4">
-                    <Mail className="w-6 h-6 text-gray-400" />
-                    <div>
-                      <p className="text-sm text-gray-400">Organization Email</p>
-                      <p className="text-lg font-semibold text-white">{userData.orgEmail}</p>
-                    </div>
-                  </div>
-
                   <div className="flex items-center space-x-4">
                     <Mail className="w-6 h-6 text-gray-400" />
                     <div>
@@ -90,20 +65,10 @@ const Profile = () => {
               </div>
             </div>
 
-            {/* Middle Column: Project Details */}
             <div className="col-span-1 lg:col-span-2">
               <div className="bg-gray-800 rounded-xl shadow-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-6">Project Overview</h3>
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="flex items-center space-x-4">
-                    <Target className="w-6 h-6 text-blue-400" />
-                    <div>
-                      <p className="text-sm text-gray-400">Target</p>
-                      <p className="text-lg font-semibold text-white">{userData.target}</p>
-                    </div>
-                  </div>
-
                   <div className="flex items-center space-x-4">
                     <MapPin className="w-6 h-6 text-blue-400" />
                     <div>
@@ -111,39 +76,17 @@ const Profile = () => {
                       <p className="text-lg font-semibold text-white">{userData.location}</p>
                     </div>
                   </div>
-
-
                   <div className="flex items-center space-x-4">
-                    <Calendar className="w-6 h-6 text-blue-400" />
+                    <MapPin className="w-6 h-6 text-blue-400" />
                     <div>
-                      <p className="text-sm text-gray-400">Project Duration</p>
-                      <p className="text-lg font-semibold text-white">{userData.projectDuration} Months</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-4">
-                    <Zap className="w-6 h-6 text-blue-400" />
-                    <div>
-                      <p className="text-sm text-gray-400">Energy Consumption</p>
-                      <p className="text-lg font-semibold text-white">{userData.energyConsumption} kWh</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Additional Notes */}
-                <div className="mt-8">
-                  <div className="flex items-center space-x-4">
-                    <FileText className="w-6 h-6 text-blue-400" />
-                    <div>
-                      <p className="text-sm text-gray-400">Additional Notes</p>
-                      <p className="text-lg font-semibold text-white">{userData.notes}</p>
+                      <p className="text-sm text-gray-400">Area</p>
+                      <p className="text-lg font-semibold text-white">{userData.area}</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: Energy Consumption Chart */}
             <div className="col-span-1 lg:col-span-3">
               <div className="bg-gray-800 rounded-xl shadow-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-6">Energy Production Trends</h3>
@@ -163,7 +106,6 @@ const Profile = () => {
           <p className="text-center text-gray-400">No data submitted yet.</p>
         )}
 
-        {/* Edit Profile Modal */}
         {isModalOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-gray-800 rounded-lg shadow-lg p-6 w-full max-w-md">
@@ -191,16 +133,6 @@ const Profile = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm text-gray-400">Organization Email</label>
-                    <input
-                      type="email"
-                      name="orgEmail"
-                      value={formData.orgEmail}
-                      onChange={handleChange}
-                      className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
-                  <div>
                     <label className="block text-sm text-gray-400">Leader Email</label>
                     <input
                       type="email"
@@ -210,7 +142,35 @@ const Profile = () => {
                       className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
-                  {/* Add more fields as needed */}
+                  <div>
+                    <label className="block text-sm text-gray-400">Location</label>
+                    <input
+                      type="text"
+                      name="location"
+                      value={formData.location}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm text-gray-400">Area</label>
+                    <input
+                      type="text"
+                      name="area"
+                      value={formData.area}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm text-gray-400">Additional Notes</label>
+                    <textarea
+                      name="notes"
+                      value={formData.notes}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
                 </div>
                 <div className="mt-6 flex justify-end space-x-4">
                   <button
