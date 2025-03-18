@@ -112,13 +112,6 @@ const Profile = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-4">
-                    <DollarSign className="w-6 h-6 text-blue-400" />
-                    <div>
-                      <p className="text-sm text-gray-400">Budget</p>
-                      <p className="text-lg font-semibold text-white">${userData.budget}</p>
-                    </div>
-                  </div>
 
                   <div className="flex items-center space-x-4">
                     <Calendar className="w-6 h-6 text-blue-400" />

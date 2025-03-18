@@ -13,7 +13,6 @@ const SolarForm = () => {
     leaderEmail: "",
     target: "",
     location: "",
-    budget: "",
     projectDuration: "",
     energyConsumption: "",
     notes: "",
@@ -135,18 +134,6 @@ const SolarForm = () => {
           />
         </div>
 
-        {/* Budget */}
-        <div>
-          <label className="block text-gray-300">Budget (USD)</label>
-          <input
-            type="number"
-            name="budget"
-            value={formData.budget}
-            onChange={handleChange}
-            className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-        </div>
 
         {/* Project Duration */}
         <div>
