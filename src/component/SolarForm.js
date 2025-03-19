@@ -41,7 +41,7 @@ const SolarForm = () => {
 
         {/* Leader Name */}
         <div>
-          <label className="block text-gray-300">Leader Name</label>
+          <label className="block text-gray-300">Client Name</label>
           <input
             type="text"
             name="leaderName"
@@ -55,7 +55,7 @@ const SolarForm = () => {
 
         {/* Leader Email */}
         <div>
-          <label className="block text-gray-300">Leader Email</label>
+          <label className="block text-gray-300">Client Email</label>
           <input
             type="email"
             name="leaderEmail"

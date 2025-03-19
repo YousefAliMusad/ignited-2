@@ -50,14 +50,14 @@ const Profile = () => {
                   <div className="flex items-center space-x-4">
                     <User className="w-6 h-6 text-gray-400" />
                     <div>
-                      <p className="text-sm text-gray-400">Leader Name</p>
+                      <p className="text-sm text-gray-400">Client Name</p>
                       <p className="text-lg font-semibold text-white">{userData.leaderName}</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
                     <Mail className="w-6 h-6 text-gray-400" />
                     <div>
-                      <p className="text-sm text-gray-400">Leader Email</p>
+                      <p className="text-sm text-gray-400">Client Email</p>
                       <p className="text-lg font-semibold text-white">{userData.leaderEmail}</p>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ const Profile = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm text-gray-400">Leader Name</label>
+                    <label className="block text-sm text-gray-400">Client Name</label>
                     <input
                       type="text"
                       name="leaderName"
@@ -133,7 +133,7 @@ const Profile = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm text-gray-400">Leader Email</label>
+                    <label className="block text-sm text-gray-400">Client Email</label>
                     <input
                       type="email"
                       name="leaderEmail"
